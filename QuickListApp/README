@@ -14,6 +14,7 @@ Some things to note:
 5. Each layout points to a selector for the background e.g (/res/drawble/top_list_selector)
 6. For the top on bottom selectors you point different shapes to show the top and bottom borders.
 7. The mid_list_selector does not need a shape as it is square so the selector just users colors.
+8. Also remember to add  android:listSelector="@android:color/transparent" to your list view - see the main.xml.  This stops a highlight appearing behind the rouded borders
 
 Hope this is informative - please fork and improve
 
