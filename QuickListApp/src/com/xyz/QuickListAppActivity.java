@@ -30,25 +30,19 @@ public class QuickListAppActivity extends Activity {
 		MyListAdapter listAdapter = new MyListAdapter();
 
         
-        //ListView lv= (ListView)findViewById(R.id.listView1);
-
         String[] values = new String[] { "Android", "iPhone", "WindowsMobile",
 				"Blackberry", "WebOS", "Ubuntu", "Windows7", "Max OS X",
 				"Linux", "OS/2" };
-		//ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-		//		android.R.layout.simple_list_item_1, values);
 		
-       
-        	
-        	
         
 		
         LayoutInflater inflater = getLayoutInflater();  
 		
 		int item_layout = 0 ;
 		
-		 for(int i = 0 ; i < values.length;i++) {
-			
+		for(int i = 0 ; i < values.length;i++) {
+		
+			//decide which layout to show depending on the item position
 			if(i==0) {
 				item_layout = R.layout.top_list_layout ;
 			} else if(i==values.length-1) {
@@ -78,7 +72,8 @@ public class QuickListAppActivity extends Activity {
     }
     
     
-static class MyListAdapter extends BaseAdapter {	
+    //custom list adapter so I can add items as I go with addView
+    static class MyListAdapter extends BaseAdapter {	
 		
 
 		private List<View> views = new ArrayList<View>();

@@ -3,3 +3,22 @@ ANDROID: A list view with rounded borders
 
 A quick hack at creating a list view with rounded borders.  This seems to work but I am sure there are better ways to do this - at least I hope there are
 
+The QuickListAppActiviy should show a list with rounded borders which highlights in green. 
+
+Some things to note:
+
+1. The list activity has a customer adapter which lets me add items with different layouts  see onCreate in the QuickListActivity
+2. The top item gets a res/layout/toplist_layout
+3. The bottom item gets a res/layout/bottomlist_layout
+4. The middle items get gets a res/mid/bottomlist_layout
+5. Each layout points to a selector for the background e.g (/res/drawble/top_list_selector)
+6. For the top on bottom selectors you point different shapes to show the top and bottom borders.
+7. The mid_list_selector does not need a shape as it is square so the selector just users colors.
+
+Hope this is informative - please fork and improve
+
+Cheers
+
+Richard
+Dec 2011
+
